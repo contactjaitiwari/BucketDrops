@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import slidenerd.jait.bucketdrops.beans.Drop;
 
 /**
@@ -54,8 +53,6 @@ public class DialogAdd extends DialogFragment {
         //get the time what it was added
         String what = mInputWhat.getText().toString();
         long now = System.currentTimeMillis();
-        RealmConfiguration configuration = new RealmConfiguration.Builder(getActivity()).build();
-        Realm.setDefaultConfiguration(configuration);
         Realm realm = Realm.getDefaultInstance();
         Drop drop = new Drop(what, now, 0, false);
         realm.beginTransaction();
