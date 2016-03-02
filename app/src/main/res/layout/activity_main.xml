@@ -5,16 +5,17 @@
     android:layout_height="match_parent"
     tools:context="slidenerd.jait.bucketdrops.ActivityMain">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
 
     <ImageView
         android:id="@+id/iv_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
         android:contentDescription="Yo" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
 
     <slidenerd.jait.bucketdrops.widgets.BucketRecyclerView
         android:id="@+id/rv_drops"
